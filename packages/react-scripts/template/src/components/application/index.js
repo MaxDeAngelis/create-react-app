@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class Application extends Component {
     render() {
@@ -15,4 +16,7 @@ class Application extends Component {
     }
 }
 
-export default Application;
+function mapStateToProps(state) {
+    return state;
+}
+export default connect(mapStateToProps)(Application);
